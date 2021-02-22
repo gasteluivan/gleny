@@ -54,10 +54,10 @@ $(document).ready(function() {
     		transition: 'fade2',
     		transitionDuration: 4000,
     		slides: [
-    			{ src: "./img/portfolio_1.jpg" },
-    			{ src: "./img/portfolio_2.jpg" },
-    			{ src: "./img/portfolio_3.jpg" },
-    			{ src: "./img/portfolio_4.jpg" }
+    			{ src: "./img/gleny/seccion_gleny-min.jpg" }
+    			// { src: "./img/portfolio_2.jpg" },
+    			// { src: "./img/portfolio_3.jpg" },
+    			// { src: "./img/portfolio_4.jpg" }
     		]
     	});
     }
@@ -150,6 +150,7 @@ $(document).ready(function() {
 		var videoHeight = $("#video-bg").outerHeight();
 				
 		/* Full Width */
+		($(window).scrollTop() > 10) ? $('#primary-navbarOwn').addClass('affix') : $('#primary-navbar').removeClass('affix');		
 		($(window).scrollTop() > sliderHeight) ? $('#primary-navbar').addClass('affix') : $('#primary-navbar').removeClass('affix');		
 		($(window).scrollTop() > blogHeight) ? $('#primary_navbar_blog').addClass('affix') : $('#primary_navbar_blog').removeClass('affix');
 	
