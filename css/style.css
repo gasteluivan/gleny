@@ -110,11 +110,16 @@ button i {
 .btn:hover,
 .btn:focus {
   cursor: pointer;
-  background: #940154;
+  background: #000000;
 }
 .fill-btn {
   background: #de037f;
   color: #fff;
+}
+.ct-btn {
+  background: #464441;
+  color: #fff;
+  letter-spacing: 0.3em
 }
 .transparent-btn {
   background: transparent;
@@ -601,6 +606,38 @@ footer h2 {
 
 /* 8 Story Section
 ==================================================== */
+.barrGradient:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100px;
+    /* background-image: linear-gradient(90deg, #000 0%, #fff 100%); */
+    background-image: rgb(0, 0, 0);
+  background-image: -moz-linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(255, 255, 255, 1) 33.3%,
+    rgba(255, 255, 255, 1) 66.6%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(255, 255, 255, 1) 33.3%,
+    rgba(255, 255, 255, 1) 66.6%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(255, 255, 255, 1) 33.3%,
+    rgba(255, 255, 255, 1) 66.6%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+}
 
 /*story section images*/
 .story-img-1 {
@@ -1278,6 +1315,23 @@ select.form-control:not([size]):not([multiple]) {
 
 /* 18 Footer Section
 ==================================================== */
+#contacto {
+  padding: 8rem 0;
+  background: url("../img/init/fondo.jpg") no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+.blur {
+  background: rgb(255 255 255 / 20%);
+  backdrop-filter: blur(7px);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.BGCOnta{
+  background: #ffffffc7;
+}
 #footer {
   padding: 8rem 0;
   /* background: url("../img/footer_bg.jpg") no-repeat fixed center center / cover rgba(0, 0, 0, 0); */
