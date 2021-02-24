@@ -905,9 +905,23 @@ footer h2 {
 	padding-bottom: 0 !important;
 	overflow-x: unset !important; */
 }
+
+.mt-per-2 {
+  margin-top: 2rem!important;
+}
+.mt-per-4 {
+  margin-top: 4rem!important;
+}
+
+.noBackground{background: none !important;}
 #portfolio {
   background: url(../img/init/triangulo.svg) no-repeat center center / cover
     rgba(0, 0, 0, 0);
+  padding-bottom: 0 !important;
+  overflow-x: unset !important;
+}
+#portfolio2 {
+  /* background: url(../img/init/triangulo.svg) no-repeat center center / cover rgba(0, 0, 0, 0); */
   padding-bottom: 0 !important;
   overflow-x: unset !important;
 }
@@ -932,6 +946,11 @@ footer h2 {
   outline: none;
 }
 #portfolio .item {
+  margin-bottom: 1.875rem;
+  position: relative;
+  min-height: 1px;
+}
+#portfolio2 .item {
   margin-bottom: 1.875rem;
   position: relative;
   min-height: 1px;
@@ -1727,6 +1746,14 @@ select.form-control:not([size]):not([multiple]) {
     -webkit-box-ordinal-group: 3;
     order: 2;
   }
+
+  .mt-per-2 {
+    margin-top: 0rem!important;
+  }
+  .mt-per-4 {
+    margin-top: 0rem!important;
+  }
+  
 
   /* slider */
   #slider p,
