@@ -348,79 +348,82 @@ $(document).ready(function() {
     -----------------------------------------------------------------------------------*/
 	
 	// form validation
-	$("#rsvp_form").validate({
-		rules: {
-			name: {
-				required: true,
-				minlength: 4
-			},
-			email: "required",
-			
-			guest: {
-				required: true
-			},
-			attend: {
-				required: true
-			},
-			message: {
-				maxlength: 200
-			}
-		},
-		messages: {
-			name:{
-				required: "Please enter your name",
-				minlength: jQuery.validator.format("At least {0} characters required!")
-			},
-			email: "Please enter your email",
-			guest: "Please select number of guest",
-			attend: "Please select event",
-			message: {
-				maxlength: jQuery.validator.format("Please enter no more than {0} characters!")
-			},
-		},
+	// $("#rsvp_form").validate({
+	// 	rules: {
+	// 		nombres: {
+	// 			required: true,
+	// 			minlength: 4
+	// 		},
+	// 		apellido: {
+	// 			required: true,
+	// 			minlength: 4
+	// 		},
+	// 		email: "required",
+	// 		telefono: {
+	// 			required: true
+	// 		},
+	// 		mensaje: {
+	// 			maxlength: 300
+	// 		}
+	// 	},
+	// 	messages: {
+	// 		name:{
+	// 			required: "Porfavor ingresar su nombre",
+	// 			minlength: jQuery.validator.format("At least {0} characters required!")
+	// 		},
+	// 		apellido:{
+	// 			required: "Porfavor ingresar su apellido",
+	// 			minlength: jQuery.validator.format("At least {0} characters required!")
+	// 		},
+	// 		email: "Porfavor ingrese su Correo Electronico",
+	// 		telefono: "Porfavor ingresa tu numero telefónico",
+	// 		mensaje: {
+	// 			maxlength: jQuery.validator.format("Please enter no more than {0} characters!")
+	// 		},
+	// 	},
 
-		// ajax request
-		submitHandler: function (form) {
+	// 	// ajax request
+	// 	submitHandler: function (form) {
 			
-			var data = $(form).serialize();
-			var form = $("#rsvp_form");
+	// 		var data = $(form).serialize();
+	// 		var form = $("#rsvp_form");
 			
-			// loader
-			$( ".loader").show();
+	// 		// loader
+	// 		$( ".loader").show();
 			
-			// ajax request
-			$.ajax({
-				type: "POST",
-				url: "sender.php",
-				data: data,
-				dataType: "json",
-				success: function (data) {
+	// 		// ajax request
+	// 		$.ajax({
+	// 			type: "POST",
+	// 			url: "sender.php",
+	// 			data: data,
+	// 			dataType: "json",
+	// 			success: function (data) {
 					
-					// if send data successfull
-					if(data.status === 'success'){
+	// 				// if send data successfull
+	// 				if(data.status === 'success'){
 						
-						$( ".loader").hide();
-						$( form ).fadeOut( "slow" );
-						setTimeout(function() {
-							$( ".form-success").show( "slow" );
-						}, 300);
+	// 					$( ".loader").hide();
+	// 					$( form ).fadeOut( "slow" );
+	// 					setTimeout(function() {
+	// 						$( ".form-success").show( "slow" );
+	// 					}, 300);
 						
-					// if send data something wrong	
-					}else if(data.status === 'error'){
+	// 				// if send data something wrong	
+	// 				}else if(data.status === 'error'){
 						
-						$( ".loader").hide();
-						$( form ).fadeOut( "slow" );
-						setTimeout(function() {
-							$( ".form-error").show( "slow" );
-						}, 300);
-					}
+	// 					$( ".loader").hide();
+	// 					$( form ).fadeOut( "slow" );
+	// 					setTimeout(function() {
+	// 						$( ".form-error").show( "slow" );
+	// 					}, 300);
+	// 				}
 					
-				}
-			});
-			return false;
-		}	   
+	// 			}
+	// 		});
+	// 		return false;
+	// 	}	   
 
-	});
+	// });
 
 
 });
