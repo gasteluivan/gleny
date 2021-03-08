@@ -6,14 +6,29 @@
 
 		"use strict";
 		// Load the page and wait 1s.
-	    $('#loader').delay( 1000 ).fadeOut('slow');	
+	    $('#loader').delay( 800 ).fadeOut('slow');	
+		// $('.grid').isotope({
+		// 	itemSelector: '.grid-item',
+		// 	percentPosition: false,
+		// 	masonry: {
+		// 		columnWidth: '.grid-item'
+		// 	}
+		// });
 
 	});
 
 $(document).ready(function() {
 
 	"use strict";
-
+            
+	$('.grid').isotope({
+		itemSelector: '.grid-item',
+		percentPosition: false,
+		masonry: {
+			columnWidth: '.grid-item'
+		}
+	});
+	console.log('aqui');
 
 	/* AOS
 	-----------------------------------------------------------------------------------*/
@@ -295,7 +310,7 @@ $(document).ready(function() {
 
 	$('#gift-carousel').owlCarousel({
 		loop:true,
-		margin:10,
+		// margin:10,
 		touchDrag: true,
 		responsiveClass:true,
 		responsive:{
@@ -305,14 +320,15 @@ $(document).ready(function() {
 			},
 			600:{
 				items:2,
-				nav:false
+				nav:true
 			},
 			1000:{
-				items:4,
-				nav:false,
+				items:3,
+				nav:true,
 				loop:false
 			}
-		}
+		},
+		navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
 	})
 
 	$('#comment-carousel').owlCarousel({
@@ -408,3 +424,54 @@ $(document).ready(function() {
 
 
 });
+
+(function() {
+	// Get all images with the `detail-view` class
+	var zoomBoxes = document.querySelectorAll('.detail-view');
+  
+	// Extract the URL
+	zoomBoxes.forEach(function(image) {
+	  var imageCss = window.getComputedStyle(image, false),
+		imageUrl = imageCss.backgroundImage
+						   .slice(4, -1).replace(/['"]/g, '');
+  
+	  // Get the original source image
+	  var imageSrc = new Image();
+	  imageSrc.onload = function() {
+		var imageWidth = imageSrc.naturalWidth,
+			imageHeight = imageSrc.naturalHeight,
+			ratio = imageHeight / imageWidth;
+  
+		// Adjust the box to fit the image and to adapt responsively
+		var percentage = ratio * 100 + '%';
+		image.style.paddingBottom = percentage;
+  
+		// Zoom and scan on mousemove
+		image.onmousemove = function(e) {
+		  // Get the width of the thumbnail
+		  var boxWidth = image.clientWidth,
+			  // Get the cursor position, minus element offset
+			  x = e.pageX - this.offsetLeft,
+			  y = e.pageY - this.offsetTop,
+			  // Convert coordinates to % of elem. width & height
+			  xPercent = x / (boxWidth / 100) + '%',
+			  yPercent = y / (boxWidth * ratio / 100) + '%';
+  
+		  // Update styles w/actual size
+		  Object.assign(image.style, {
+			backgroundPosition: xPercent + ' ' + yPercent,
+			backgroundSize: imageWidth + 'px'
+		  });
+		};
+  
+		// Reset when mouse leaves
+		image.onmouseleave = function(e) {
+		  Object.assign(image.style, {
+			backgroundPosition: 'center',
+			backgroundSize: 'cover'
+		  });
+		};
+	  }
+	  imageSrc.src = imageUrl;
+	});
+  })();

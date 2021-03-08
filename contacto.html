@@ -36,6 +36,7 @@
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="css/style.css">
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 
 	</head>
 	<body>
@@ -137,7 +138,8 @@
                     </div>
                     <div class="row pl-0 pr-0 pl-md-4 pr-md-4">
                         <div class="form-group col-md-12 text-right">
-                            <button type="submit" class="button-medium btn btn-default ct-btn pl-4 pr-4">ENVIAR
+							<input type="button" value="Send Email">
+                            <button type="button" onclick="sendEmail()" class="button-medium btn btn-default ct-btn pl-4 pr-4">ENVIAR
                                 <img class="loader" src="img/Loader_to_form_white.gif" alt=""/>
                             </button>
                         </div>
@@ -215,6 +217,21 @@
 		<script src="js/main.js"></script>
 
 
+		<script type="text/javascript">
+			function sendEmail() {
+				Email.send({
+					Host : "smtp.gmail.com",
+					Username : "glenycstr@gmail.com",
+					Password : "gleny007",
+					To : 'igastelu@factoriamedia.com',
+					From : "glenycstr@gmail.com",
+					Subject : "This is the subject",
+					Body : "And this is the body"
+				}).then(
+				message => alert(message)
+				); 
+			}
+		</script>
 
 	</body>
 

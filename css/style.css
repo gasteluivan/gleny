@@ -88,7 +88,7 @@
 }
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #de037f;
+  background: #5a5a5a;
 }
 #comment .owl-theme .owl-dots .owl-dot span {
   width: 10px;
@@ -97,7 +97,8 @@
   border-radius: 30px;
 }
 .owl-theme .owl-dots .owl-dot span {
-  background: #d2d2d2;
+  background: #ffffff;
+  border: 1px solid #5a5a5a;
 }
 
 .btn {
@@ -961,6 +962,17 @@ footer h2 {
   -o-transition: 450ms all cubic-bezier(0.4, 0, 1, 1);
   transition: 450ms all cubic-bezier(0.4, 0, 1, 1);
   width: 100%;
+  /* cursor: crosshair; */
+  /* cursor: url(../img/lupa.png), auto; */
+}
+.owl-carousel .item img {
+  border-radius: 3px;
+  -webkit-transition: 450ms all cubic-bezier(0.4, 0, 1, 1);
+  -o-transition: 450ms all cubic-bezier(0.4, 0, 1, 1);
+  transition: 450ms all cubic-bezier(0.4, 0, 1, 1);
+  width: 100%;
+  /* cursor: crosshair; */
+  cursor: url(../img/lupa.png), auto;
 }
 .thumbnail-overlay {
   overflow: hidden;
@@ -1140,8 +1152,18 @@ footer h2 {
 #gift h4 {
   font-weight: 300;
 }
+#gift-carousel{
+  /* margin: 0 20px 0px -20px; */
+}
 
 #gift-carousel .item {
+  background: none repeat scroll 0 0 #fff;
+  color: #444;
+  margin: 1em;
+  overflow: hidden;
+  text-align: center;
+}
+/* #gift-carousel .item {
   background: none repeat scroll 0 0 #fff;
   border: 1px solid #cecece;
   border-radius: 3px;
@@ -1150,7 +1172,7 @@ footer h2 {
   padding: 10px;
   margin-bottom: 2em;
   text-align: center;
-}
+} */
 .owl-theme .owl-controls .owl-page span {
   background: none repeat scroll 0 0 #d2d2d2;
   -webkit-transition: all ease-in-out 300ms;
@@ -1173,6 +1195,33 @@ footer h2 {
 }
 .customNavigation a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+
+.image-container {
+  display: inline-block;
+  padding: 1em;
+  max-width: 50%;
+  vertical-align: top;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.image-container:hover {
+  /* background-color: #cde; */
+}
+
+.image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: crosshair;
+  display: block;
+  max-width: 100%;
+  padding-bottom: 10em;
+  width: 100em;
 }
 
 /* 17 RSVP Section
@@ -1217,7 +1266,7 @@ footer h2 {
   font-weight: 300;
 }
 label.error {
-  color: #fff;
+  color: rgb(252, 36, 36);
   font-weight: 400;
 }
 label.error:after {
@@ -1975,3 +2024,39 @@ select.form-control:not([size]):not([multiple]) {
     padding: 0;
   }
 }
+
+
+
+/* own css */
+
+.owl-theme .owl-nav [class*=owl-] {
+  color: #FFF;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 20px;
+  background: #d6d6d600;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px
+}
+
+.owl-prev, .owl-next {
+  width: 15px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block !important;
+  /* border:0px solid black; */
+  background: #d6d6d600;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: #eeeeee00;
+    color: #FFF;
+    text-decoration: none;
+}
+.owl-prev { left: 30px; }
+.owl-next { right: 30px; }
+.owl-prev i { color: #ccc;}
+.owl-next i { color: #ccc; margin-left: -17px !important;}
