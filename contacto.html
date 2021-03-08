@@ -271,10 +271,8 @@
 				var mensaje = document.getElementById("mensaje").value;
 				$(".form-success").hide()
 				$(".loader").show();
-				Email.send({
-					Host: "smtp.gmail.com",
-					Username: "glenycstr@gmail.com",
-					Password: "gleny007",
+				Email.send({					
+					SecureToken : "907eab58-783a-4119-9b88-7c8b4f9b93d9",
 					To: 'igastelu@factoriamedia.com',
 					From: "glenycstr@gmail.com",
 					Subject: "Correo Electronico enviado desde la Web - GlenyCastro.com",
