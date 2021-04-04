@@ -6,7 +6,7 @@
 
 		"use strict";
 		// Load the page and wait 1s.
-	    $('#loader').delay( 800 ).fadeOut('slow');	
+	    $('#loader').delay( 500 ).fadeOut('fast');	
 		// $('.grid').isotope({
 		// 	itemSelector: '.grid-item',
 		// 	percentPosition: false,
@@ -28,7 +28,7 @@ $(document).ready(function() {
 			columnWidth: '.grid-item'
 		}
 	});
-	console.log('aqui');
+	// console.log('aqui');
 
 	/* AOS
 	-----------------------------------------------------------------------------------*/
@@ -39,22 +39,22 @@ $(document).ready(function() {
 
 	/* Video Player
 	-----------------------------------------------------------------------------------*/
-	if ($("#video-wrap").length) {
-        $('#video-wrap').YTPlayer({            
-             showControls: false,
-            playerVars: {
-                modestbranding: 0,
-                autoplay: 1,
-                controls: 1,
-                showinfo: 0,
-                wmode: 'transparent',
-                branding: 0,
-                rel: 0,
-                autohide: 0,
-                origin: window.location.origin
-            }
-        });
-    }
+	// if ($("#video-wrap").length) {
+    //     $('#video-wrap').YTPlayer({            
+    //          showControls: false,
+    //         playerVars: {
+    //             modestbranding: 0,
+    //             autoplay: 1,
+    //             controls: 1,
+    //             showinfo: 0,
+    //             wmode: 'transparent',
+    //             branding: 0,
+    //             rel: 0,
+    //             autohide: 0,
+    //             origin: window.location.origin
+    //         }
+    //     });
+    // }
 
 	/* Vegas Slider
 	-----------------------------------------------------------------------------------*/
