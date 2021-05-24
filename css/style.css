@@ -2171,6 +2171,13 @@ select.form-control:not([size]):not([multiple]) {
   #event .text-right {
     text-align: left !important;
   }
+  #portfolio .item .thumbnail-overlay:after {
+    opacity: 1;
+  }
+  #portfolio .thumbnail-title{
+    opacity: 1;
+  }
+
 }
 
 /* Small devices (landscape phones, 578px and 767px) */
