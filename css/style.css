@@ -2177,11 +2177,25 @@ select.form-control:not([size]):not([multiple]) {
   #portfolio .thumbnail-title{
     opacity: 1;
   }
+  .thumbnail-overlay:after {
+    background: rgba(0, 0, 0, 0.2) !important;
+  }
 
 }
 
 /* Small devices (landscape phones, 578px and 767px) */
 @media screen and (min-width: 578px) and (max-width: 767px) {
+
+  #portfolio .item .thumbnail-overlay:after {
+    opacity: 1;
+  }
+  #portfolio .thumbnail-title{
+    opacity: 1;
+  }
+  .thumbnail-overlay:after {
+    background: rgba(0, 0, 0, 0.2) !important;
+  }
+
   #primary-navbar-box.affix {
     min-width: 100%;
   }
