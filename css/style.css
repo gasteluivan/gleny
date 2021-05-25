@@ -2178,7 +2178,7 @@ select.form-control:not([size]):not([multiple]) {
     opacity: 1;
   }
   .thumbnail-overlay:after {
-    background: rgba(0, 0, 0, 0.2) !important;
+    background: rgba(0, 0, 0, 0.4) !important;
   }
 
 }
@@ -2193,7 +2193,7 @@ select.form-control:not([size]):not([multiple]) {
     opacity: 1;
   }
   .thumbnail-overlay:after {
-    background: rgba(0, 0, 0, 0.2) !important;
+    background: rgba(0, 0, 0, 0.4) !important;
   }
 
   #primary-navbar-box.affix {
